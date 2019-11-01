@@ -20,18 +20,15 @@ class PlayerData extends React.Component{
             .catch(err => {
                 console.log(err)
             })
-        // this.setState({
-        //     playerData: this.props.data
-        // })
-        // conso
+        
     }
     render(){
-        console.log('state',this.state.playerData)
+        // console.log('state',this.state.playerData)
         return (
             <div>
                 {this.state.playerData.map(player => (
-                    <>
-                        {/* {console.log(player)} */}
+                    
+                        
                         <Players 
                             key={player.id} 
                             name={player.name}  
@@ -40,7 +37,7 @@ class PlayerData extends React.Component{
                         />
                         
                        
-                    </>
+                    
                 ))}
             </div>
         )

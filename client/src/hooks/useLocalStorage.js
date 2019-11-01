@@ -4,7 +4,7 @@ import { useState } from 'react';
 // if local data use that, else use initial data
 // update localStorage when needed
 // Don't forget to parse data from localStorage, and stringify new data getting stored
-const useLocalStorage = (key, initialValue) => {
+export const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
     if (window.localStorage.getItem(key)) {
       return JSON.parse(window.localStorage.getItem(key));
@@ -20,4 +20,3 @@ const useLocalStorage = (key, initialValue) => {
 
   return [storedValue, setValue];
 };
-export default useLocalStorage
